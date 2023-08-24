@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Desafio {
     public static void main(String[] args) {
-        String nome = "Matelson Nunes";
+        String nome = "Matelson Nunes do Nascimento";
         String tipodaConta = "Corrente";
         double saldoEmConta = 1500;
 
