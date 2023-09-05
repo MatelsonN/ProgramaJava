@@ -25,8 +25,6 @@ public class Principal {
         //System.out.println(meuFilme.pegaMedia());
 
         Serie lost = new Serie("Lost", 2000);
-        //lost.setNome("Lost");
-        //lost.setAnoDeLancamento(2000);
         lost.exibeFichaTecnica();
         lost.setTemporadas(10);
         lost.setEpisodiosPorTemporada(10);
@@ -34,8 +32,6 @@ public class Principal {
         System.out.println("Duração para maratonar lost: " + lost.getDuracaoEmMinutos());
 
         Filme outroFilme = new Filme("Avatar", 2023);
-        //outroFilme.setNome("Avatar"); criando o construtor e passando em new filme essa linha não é usável.
-        //outroFilme.setAnoDeLancamento(2023);
         outroFilme.setDuracaoEmMinutos(200);
 
         CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
