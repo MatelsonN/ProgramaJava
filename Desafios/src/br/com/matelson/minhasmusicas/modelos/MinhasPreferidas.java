@@ -1,4 +1,4 @@
-package br.com.alura.minhasmusicas.modelos;
+package br.com.matelson.minhasmusicas.modelos;
 
 public class MinhasPreferidas {
     public void inclui(Audio audio){

@@ -1,8 +1,8 @@
-package br.com.alura.minhasmusicas.principal;
+package br.com.matelson.minhasmusicas.principal;
 
-import br.com.alura.minhasmusicas.modelos.MinhasPreferidas;
-import br.com.alura.minhasmusicas.modelos.Musica;
-import br.com.alura.minhasmusicas.modelos.Podcast;
+import br.com.matelson.minhasmusicas.modelos.MinhasPreferidas;
+import br.com.matelson.minhasmusicas.modelos.Musica;
+import br.com.matelson.minhasmusicas.modelos.Podcast;
 
 public class Principal {
     public static void main(String[] args) {
