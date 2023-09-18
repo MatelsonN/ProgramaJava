@@ -1,4 +1,4 @@
-package br.com.alura.minhasmusicas.modelos;
+package br.com.matelson.minhasmusicas.modelos;
 
 public class Audio {
     private String titulo;
@@ -33,6 +33,5 @@ public class Audio {
     public void reproduz() {
         this.totalReproducoes++;
     }
-
 
 }

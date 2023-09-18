@@ -1,8 +1,8 @@
-package br.com.alura.screenmatch.principal;
+package br.com.matelson.screenmatch.principal;
 
-import br.com.alura.screenmatch.modelos.Filme;
-import br.com.alura.screenmatch.modelos.Serie;
-import br.com.alura.screenmatch.modelos.Titulo;
+import br.com.matelson.screenmatch.modelos.Filme;
+import br.com.matelson.screenmatch.modelos.Serie;
+import br.com.matelson.screenmatch.modelos.Titulo;
 
 import java.util.ArrayList;
 import java.util.Collections;

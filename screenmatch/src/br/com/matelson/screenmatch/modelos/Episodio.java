@@ -1,6 +1,6 @@
-package br.com.alura.screenmatch.modelos;
+package br.com.matelson.screenmatch.modelos;
 
-import br.com.alura.screenmatch.calculos.Classificavel;
+import br.com.matelson.screenmatch.calculos.Classificavel;
 public class Episodio implements Classificavel {
     private int numero;
     private String nome;

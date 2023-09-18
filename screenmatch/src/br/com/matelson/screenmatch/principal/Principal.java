@@ -1,10 +1,10 @@
-package br.com.alura.screenmatch.principal;
+package br.com.matelson.screenmatch.principal;
 
-import br.com.alura.screenmatch.calculos.FiltroRecomendacao;
-import br.com.alura.screenmatch.modelos.Episodio;
-import br.com.alura.screenmatch.modelos.Filme;
-import br.com.alura.screenmatch.modelos.Serie;
-import br.com.alura.screenmatch.calculos.CalculadoraDeTempo;
+import br.com.matelson.screenmatch.calculos.FiltroRecomendacao;
+import br.com.matelson.screenmatch.modelos.Episodio;
+import br.com.matelson.screenmatch.modelos.Filme;
+import br.com.matelson.screenmatch.modelos.Serie;
+import br.com.matelson.screenmatch.calculos.CalculadoraDeTempo;
 
 import java.util.ArrayList;
 
