@@ -13,7 +13,7 @@ import java.util.Scanner;
 public class PrincipalComBuscas {
     public static void main(String[] args) throws IOException, InterruptedException {
         Scanner leitura = new Scanner(System.in);
-        System.out.println("Digite um filme para busca: ");
+        System.out.println("Digite um filme de sua preferência para busca: ");
         var busca = leitura.nextLine();
 
         String chave = "6585022c";
