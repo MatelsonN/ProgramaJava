@@ -1,7 +1,10 @@
 package br.com.matelson.screenmatch.principal;
 
 import br.com.matelson.screenmatch.modelos.Titulo;
+import br.com.matelson.screenmatch.modelos.TituloOmdb;
+import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import java.io.IOException;
 import java.net.URI;
@@ -29,8 +32,20 @@ public class PrincipalComBuscas {
         String json = response.body();
         System.out.println(json);
 
-        Gson gson = new Gson();
-        Titulo meuTitulo = gson.fromJson(json, Titulo.class);
-        System.out.println(meuTitulo);
+        Gson gson = new GsonBuilder()
+                .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE)
+                .create();
+        TituloOmdb meuTituloOmdb = gson.fromJson(json, TituloOmdb.class);
+        System.out.println(meuTituloOmdb);
+        try {
+            Titulo meuTitulo = new Titulo(meuTituloOmdb);
+            System.out.println("Titulo já convertido");
+            System.out.println(meuTitulo);
+        } catch (NumberFormatException erro) {
+            System.out.println("Aconteceu um erro: ");
+            System.out.println(erro.getMessage());
+        }
+
+        System.out.println("O programa finalizou corretamente!");
     }
 }
