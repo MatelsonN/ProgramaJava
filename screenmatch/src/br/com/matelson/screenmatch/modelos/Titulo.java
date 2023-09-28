@@ -1,11 +1,9 @@
 package br.com.matelson.screenmatch.modelos;
 
-import com.google.gson.annotations.SerializedName;
+import br.com.matelson.screenmatch.excecao.ErroDeConversaoDeAnoException;
 
-public class Titulo implements Comparable<Titulo> { //a classe Titulo, implementando a interface Comparable
-    @SerializedName("Title")
+public class Titulo implements Comparable<Titulo> {
     private String nome;
-    @SerializedName("Year")
     private int anoDeLancamento;
     private boolean incluidoNoPlano;
     private double somaDasAvaliacoes;
@@ -19,6 +17,11 @@ public class Titulo implements Comparable<Titulo> { //a classe Titulo, implement
 
     public Titulo(TituloOmdb meuTituloOmdb) {
         this.nome = meuTituloOmdb.title();
+
+        if(meuTituloOmdb.year().length() > 4) {
+            throw new ErroDeConversaoDeAnoException("Não consegui converter o ano " +
+                    "porque tem mais de 04 caracteres.");
+        }
         this.anoDeLancamento = Integer.valueOf(meuTituloOmdb.year());
         this.duracaoEmMinutos = Integer.valueOf(meuTituloOmdb.runtime().substring(0, 2));
     }
@@ -76,14 +79,14 @@ public class Titulo implements Comparable<Titulo> { //a classe Titulo, implement
     }
 
     @Override
-    public int compareTo(Titulo outroTitulo) { //implementando o método compareTo
+    public int compareTo(Titulo outroTitulo) {
         return this.getNome().compareTo(outroTitulo.getNome());
     }
 
     @Override
     public String toString() {
-        return "nome='" + nome + '\'' +
-                ", anoDeLancamento=" + anoDeLancamento + "," +
-                " duração=" + duracaoEmMinutos;
+        return "(nome =" + nome +
+                ", anoDeLancamento =" + anoDeLancamento + "," +
+                " duração =" + duracaoEmMinutos + ")";
     }
 }
